@@ -25,6 +25,9 @@
                                     <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage"/>
                                     <color key="baseForegroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="coinButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RAd-8U-r29"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="coin1" translatesAutoresizingMaskIntoConstraints="NO" id="Ekj-fh-TKd">
                                 <rect key="frame" x="95.342245989304274" y="225.99999999999852" width="200" height="200"/>
