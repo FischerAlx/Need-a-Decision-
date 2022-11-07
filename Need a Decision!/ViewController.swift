@@ -9,12 +9,13 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var coinImageViewOne: UIImageView!
+    @IBOutlet weak var coinImageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        coinImageViewOne.image = UIImage(imageLiteralResourceName: "coin3")
-        // Do any additional setup after loading the view.
+        coinImageView.image = UIImage(imageLiteralResourceName: "coin3")
+        coinImageView.alpha = 0.9
+        
     }
 
 
