@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        coinImageViewOne.image = UIImage(imageLiteralResourceName: coin1)
+        coinImageViewOne.image = UIImage(imageLiteralResourceName: "coin3")
         // Do any additional setup after loading the view.
     }
 
