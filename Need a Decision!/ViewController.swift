@@ -15,7 +15,7 @@ class ViewController: UIViewController {
        
         let coinArray = [UIImage(imageLiteralResourceName: "coin1"), UIImage(imageLiteralResourceName: "coin3")]
         
-        coinImageView.image = coinArray[Int.random(in: 0...1)]
+        coinImageView.image = coinArray.randomElement()
         coinImageView.alpha = 0.9
         
     }
