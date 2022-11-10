@@ -10,8 +10,8 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var coinImageView: UIImageView!
-    var n: Int = 1
-    var randomNumber: Int = 1
+    //var n: Int = 1
+    //var randomNumber: Int = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +26,7 @@ class ViewController: UIViewController {
             coinImageView.image = UIImage(imageLiteralResourceName: "coin1")
             n += 1
         }*/
-        coinImageView.image = [UIImage(imageLiteralResourceName: "coin1"), UIImage(imageLiteralResourceName: "coin3")][randomNumber]
+        coinImageView.image = [UIImage(imageLiteralResourceName: "coin1"), UIImage(imageLiteralResourceName: "coin3")][Int.random(in: 0...1)]
         coinImageView.alpha = 0.9
         
     }
