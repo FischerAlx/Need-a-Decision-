@@ -16,8 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yi6-Xi-8tN">
-                                <rect key="frame" x="175" y="549" width="43" height="44"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yi6-Xi-8tN">
+                                <rect key="frame" x="175" y="525.66666666666663" width="43" height="34.333333333333371"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain">
                                     <imageReference key="image" image="dollarsign" catalog="system" symbolScale="large" variableValue="0.0"/>
@@ -28,16 +28,21 @@
                                     <action selector="coinButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RAd-8U-r29"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="coin1" translatesAutoresizingMaskIntoConstraints="NO" id="Ekj-fh-TKd">
-                                <rect key="frame" x="16.666666666666657" y="311" width="360" height="230"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coin1" translatesAutoresizingMaskIntoConstraints="NO" id="Ekj-fh-TKd">
+                                <rect key="frame" x="117" y="346.66666666666669" width="159" height="159"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="159" id="KJg-bc-cTc"/>
+                                    <constraint firstAttribute="height" constant="159" id="v3w-cE-4BQ"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.22352941179999999" green="0.24313725489999999" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="yi6-Xi-8tN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PKX-HS-ofj"/>
-                            <constraint firstItem="yi6-Xi-8tN" firstAttribute="centerY" secondItem="Ekj-fh-TKd" secondAttribute="centerY" id="V3h-Du-nv3"/>
-                            <constraint firstItem="Ekj-fh-TKd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Xcq-8n-uA1"/>
+                            <constraint firstItem="Ekj-fh-TKd" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="IG5-ko-SZQ"/>
+                            <constraint firstItem="yi6-Xi-8tN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jJH-kx-e5m"/>
+                            <constraint firstItem="yi6-Xi-8tN" firstAttribute="top" secondItem="Ekj-fh-TKd" secondAttribute="bottom" constant="20.329999999999998" id="ra3-q2-tQs"/>
+                            <constraint firstItem="Ekj-fh-TKd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sAd-vn-Aiv"/>
                         </constraints>
                     </view>
                     <connections>
