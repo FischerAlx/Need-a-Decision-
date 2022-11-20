@@ -17,9 +17,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yi6-Xi-8tN">
-                                <rect key="frame" x="175" y="525.66666666666663" width="43" height="34.333333333333371"/>
+                                <rect key="frame" x="149.33333333333334" y="525.66666666666663" width="94.666666666666657" height="34.333333333333371"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain">
+                                <buttonConfiguration key="configuration" style="plain" title="money">
                                     <imageReference key="image" image="dollarsign" catalog="system" symbolScale="large" variableValue="0.0"/>
                                     <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage"/>
                                     <color key="baseForegroundColor" red="0.42745098040000001" green="0.59607843140000005" blue="0.52549019610000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -46,6 +46,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="button" destination="yi6-Xi-8tN" id="5Vb-az-9T1"/>
                         <outlet property="coinImageView" destination="Ekj-fh-TKd" id="qNw-hS-qSz"/>
                     </connections>
                 </viewController>

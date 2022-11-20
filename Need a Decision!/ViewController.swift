@@ -8,8 +8,10 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var coinImageView: UIImageView!
+    @IBOutlet weak var button: UIButton!
+
 
     @IBAction func coinButtonPressed(_ sender: UIButton) {
        
@@ -17,6 +19,7 @@ class ViewController: UIViewController {
         
         coinImageView.image = coinArray.randomElement()
         coinImageView.alpha = 0.9
+        button.titleLabel?.text = "got it"
         
     }
     
