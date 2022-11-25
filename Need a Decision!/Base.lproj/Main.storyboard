@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_12" orientation="landscape" appearance="light"/>
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
-        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,36 +12,58 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Need_a_Decision_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="852" height="393"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yi6-Xi-8tN">
-                                <rect key="frame" x="378.66666666666669" y="296.33333333333331" width="94.666666666666686" height="34.333333333333314"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="money">
-                                    <imageReference key="image" image="dollarsign" catalog="system" symbolScale="large" variableValue="0.0"/>
-                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage"/>
-                                    <color key="baseForegroundColor" red="0.42745098040000001" green="0.59607843140000005" blue="0.52549019610000003" alpha="1" colorSpace="calibratedRGB"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="coinButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RAd-8U-r29"/>
-                                </connections>
-                            </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coin1" translatesAutoresizingMaskIntoConstraints="NO" id="Ekj-fh-TKd">
-                                <rect key="frame" x="346.66666666666669" y="117" width="159" height="159"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="159" id="KJg-bc-cTc"/>
-                                    <constraint firstAttribute="height" constant="159" id="v3w-cE-4BQ"/>
-                                </constraints>
-                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="4Ja-NZ-Mc8">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FfZ-iZ-7oA" userLabel="Coin Image View">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="376"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coin1" translatesAutoresizingMaskIntoConstraints="NO" id="Ekj-fh-TKd">
+                                                <rect key="frame" x="96.666666666666686" y="88" width="200" height="200"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="200" id="TMe-wA-I02"/>
+                                                    <constraint firstAttribute="height" constant="200" id="dcV-MB-knw"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="Ekj-fh-TKd" firstAttribute="centerX" secondItem="FfZ-iZ-7oA" secondAttribute="centerX" id="gkT-3T-T7q"/>
+                                            <constraint firstItem="Ekj-fh-TKd" firstAttribute="centerY" secondItem="FfZ-iZ-7oA" secondAttribute="centerY" id="xaq-ae-x0h"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0hF-dY-afh" userLabel="Buttom View">
+                                        <rect key="frame" x="0.0" y="383" width="393" height="376"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yi6-Xi-8tN">
+                                                <rect key="frame" x="103.66666666666669" y="157" width="186" height="62"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="flip a coin">
+                                                    <fontDescription key="titleFontDescription" type="system" pointSize="40"/>
+                                                    <color key="baseForegroundColor" red="0.42745098040000001" green="0.59607843140000005" blue="0.52549019610000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="coinButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RAd-8U-r29"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="yi6-Xi-8tN" firstAttribute="centerX" secondItem="0hF-dY-afh" secondAttribute="centerX" id="JxZ-io-nPI"/>
+                                            <constraint firstItem="yi6-Xi-8tN" firstAttribute="centerY" secondItem="0hF-dY-afh" secondAttribute="centerY" id="ort-a6-fha"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.22352941179999999" green="0.24313725489999999" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="Ekj-fh-TKd" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="IG5-ko-SZQ"/>
-                            <constraint firstItem="yi6-Xi-8tN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jJH-kx-e5m"/>
-                            <constraint firstItem="yi6-Xi-8tN" firstAttribute="top" secondItem="Ekj-fh-TKd" secondAttribute="bottom" constant="20.329999999999998" id="ra3-q2-tQs"/>
-                            <constraint firstItem="Ekj-fh-TKd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sAd-vn-Aiv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="4Ja-NZ-Mc8" secondAttribute="bottom" id="ZMF-z9-Z9a"/>
+                            <constraint firstItem="4Ja-NZ-Mc8" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="kwO-X0-UJs"/>
+                            <constraint firstItem="4Ja-NZ-Mc8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="mYT-47-zDa"/>
+                            <constraint firstItem="4Ja-NZ-Mc8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="sdW-vR-bZO"/>
                         </constraints>
                     </view>
                     <connections>
@@ -57,6 +78,5 @@
     </scenes>
     <resources>
         <image name="coin1" width="360" height="360"/>
-        <image name="dollarsign" catalog="system" width="89" height="128"/>
     </resources>
 </document>
